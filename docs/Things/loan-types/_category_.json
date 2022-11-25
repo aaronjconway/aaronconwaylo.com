@@ -1,0 +1,8 @@
+{
+  "label": "Loans",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Loan types I am aware of. It is by no means an exahustive list. Availability of programs changes daily. Consult a licensed expert."
+  }
+}
