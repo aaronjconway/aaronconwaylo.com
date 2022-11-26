@@ -1,11 +1,9 @@
 ---
 title: The Home Buying Process
+description: "How to Buy a home for Dummies" 
 ---
 
-Let's assume you know you're ready to buy a home. If you're unsure: 
-
-TODO:
-Read: [should I buy or rent? The unspoken factors]
+Read: [Renting vs Buying: The Unspoken Factors](docs/guides/rent-vs-buy.md)  
 
 ## Step 1 - Financing
 

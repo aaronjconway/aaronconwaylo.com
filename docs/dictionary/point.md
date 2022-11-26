@@ -1,8 +1,12 @@
+---
+title: Point
+---
+
 A point is 1% of the loan amount.
 
 EX: 2 points = 2%. 
 
-On a 300k loan(not the purchase price - the loan)
+On a 300k loan(not the purchase price, the loan)
 
 > 2 points(2%) of 300k is the same as (0.02)*300,000 = 6,000 dollars. 
 

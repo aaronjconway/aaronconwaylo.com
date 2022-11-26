@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "350655aeff40c2e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "53762639be48079e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0972cd24eea5e6bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "about/Licensing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c7e2d8ff3a5d001b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/guides/loan-officers-suck.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b63644db862e8be9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/guides/choosing-a-loan-officer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b700e27244268aa4",
+    "type": "split",
+    "children": [
+      {
+        "id": "422e188b1c9edb21",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92611b7416004317",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f78d1e441ceb7b5f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bc1c4bc3b624da2b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "319bd7914886f59f",
+    "type": "split",
+    "children": [
+      {
+        "id": "0af282e10304ec17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "32de356d19932993",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/guides/choosing-a-loan-officer.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3bd9f6fd7aafa76d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/guides/choosing-a-loan-officer.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e681092a9b121fbb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6e94d376575fe87b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/guides/choosing-a-loan-officer.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "b63644db862e8be9",
+  "lastOpenFiles": [
+    "docs/guides/loan-officers-suck.md",
+    "about/Privacy Policy.md",
+    "about/Licensing.md",
+    "about/About Me.md",
+    "blog/welcome/index.md",
+    "about/folder/test.md"
+  ]
+}

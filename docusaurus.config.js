@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Welcome to my Website!',
   tagline: '',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://aaronconwaylo.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,23 +28,33 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   // editUrl:
-        //   //   'https://github.com/aaronjconway/website',
-        // },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   // editUrl:
-        //   //   'https://github.com/aaronjconway/website',
-        // },
+        docs: {
+          path: 'docs',
+          sidebarPath: 'sidebars.js',
+          editUrl: 'https://github.com/aaronjconway/aaronconwaylo.com/blob/main',
+        },
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/aaronjconway/aaronconwaylo.com/blob/main',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      }),
+    ],
+  ],
+
+  plugins: [
+     [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'about',
+        path: 'about',
+        routeBasePath: 'about',
       }),
     ],
   ],
@@ -54,11 +64,12 @@ const config = {
     ({
       navbar: {
         title: 'Aaron Conway',
-        logo: {
-          alt: 'Aaron Conway\'s logo ',
-          src: 'img/logo.svg',
-        },
         items: [
+          {
+            to: 'about/about',
+            position: 'right',
+            label: 'About',
+          },
           {
             type: 'doc',
             docId: 'intro',
@@ -66,13 +77,13 @@ const config = {
             label: 'Knowledge Base',
           },
           {
-            to: '/blog',
+            to: 'blog',
             label: 'Blog',
             position: 'right'
           },
           {
             href: 'https://aaronconway.floify.com/apply',
-            label: 'Floify apply now',
+            label: 'Start an Application',
             position: 'right',
           },
         ],

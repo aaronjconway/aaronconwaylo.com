@@ -1,6 +1,6 @@
 ---
 slug: Pilot
-title: Pilot (hipster first post title)
+title: Pilot 
 authors: [Aaron]
 tags: [Ramblings, For Loan Officers]
 ---

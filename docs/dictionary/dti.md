@@ -5,13 +5,12 @@ title: Debt to Income (DTI)
 The debt to income ratio is calculated by taking your debts(obligations on the credit report) divided by your income.
 
 Some are very easy to calculate and some have many many items that are too difficult to calculate on their own.
-I recommend you get your credit pulled by a loan officer and have them calculate it for you. 
+I recommend you have your credit pulled by a loan officer and have them calculate it for you. 
 
 :::info
 If you are self-employed or receive additional income such as bonus, commision or overtime you need to 
 speak with a loan officer. There are many variables involved in accurately using this type of income.
 :::
-
 
 A debt obligation is something you can't back out of such as:
 
