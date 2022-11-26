@@ -1,7 +1,11 @@
 ---
 title: The Home Buying Process
 description: "How to Buy a home for Dummies" 
+sidebar_position: 1
 ---
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="77yk1IHy"></script>
 
 Read: [Renting vs Buying: The Unspoken Factors](docs/guides/rent-vs-buy.md)  
 
@@ -9,7 +13,7 @@ Read: [Renting vs Buying: The Unspoken Factors](docs/guides/rent-vs-buy.md)
 
 You guessed it! Speak to a <u>state licensed</u> loan officer (LO) or broker.
 
-Read: [How to find a good LO.](https://google.com)
+Read: [How to find a good LO.](/docs/guides/choosing-a-loan-officer)
 
 Although you may be able to determine your [DTI](/docs/dictionary/dti)  yourself and understand some of the factors
 in being qualified:
@@ -184,4 +188,6 @@ Congratulaions! You've worked incredibly hard for this moment to happen. You are
 
 If you enjoyed this content - Please follow my social media accounts in the footer of this page and shoot me a message!
 
-I look forward to providing more educational content. 
+I look forward to providing more educational content.
+
+<div class="fb-comments" data-href="https://aaronconwaylo.com/docs/guides/home-buying-process" data-width="400" data-numposts="5"></div>
