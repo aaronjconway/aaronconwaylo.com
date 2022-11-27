@@ -5,12 +5,12 @@ description: "(Spoiler) Eeny, meeny, miny, moe is not it. "
 ## What Is Important
 
 * Communication - You should receive communication same day. Especially when it is important. 
-    * great LO's will answer the phone everytime or text a heads up when they can call back. 
+    * great LO's will answer the phone every time or text a heads up when they can call back. 
     * You're answered and not dismissed. No steam-rolling. 
     * You are respected yet given honest and clear expectations. There is no "fluff"
     * You feel confident in the next steps.  
 
-* Due dilligence - Your LO catches any potential problems that can arise and warns you of them. They provide you 
+* Due diligence - Your LO catches any potential problems that can arise and warns you of them. They provide you 
 with all the pieces of the puzzle as accurately as they can at that time.
 Expectations are clear.
 
