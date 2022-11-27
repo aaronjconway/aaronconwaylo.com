@@ -4,31 +4,49 @@
  * work well for content-centric websites.
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-pagination-nav-border-radius: var(--ifm-global-radius);
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* sky-700 */
+  --ifm-color-primary: #3997F5;
+  /* slate-800 */
+  --ifm-font-color-base: #1e293b;
   --ifm-code-font-size: 95%;
+  --ifm-heading-color: #242C53;
+  --ifm-link-color:#52aa5e;
+  --ifm-link-hover-color:#0CD927;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
 }
 
-div[class^='theme-doc-sidebar-container docSidebarContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module']{
-  border-right: 4px solid var(--ifm-toc-border-color);
-}
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+[data-theme="dark"] {
+  /*sky 400*/
+  --ifm-color-primary: #6fadec;
+  --ifm-font-color-base: #cbd5e1;
+  --ifm-link-color: #fde68a; 
+  --ifm-link-hover-color: #FFD83C; 
+  --ifm-heading-color: #B4D7FA;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+
+/*custom menu border*/
+.menu {
+  font-weight: var(--ifm-font-weight-semibold);
+  overflow-x: hidden;
+  border-right-color: #1e293b;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.navbar {
+  border-bottom-color: #1e293b;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+
+}
+
