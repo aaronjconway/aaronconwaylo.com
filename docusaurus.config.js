@@ -115,11 +115,11 @@ const config = {
               },
               {
                 label: 'Licensing',
-                to: '/licensing',
+                to: 'about/licensing',
               },
               {
                 label: 'Privacy Policy',
-                to: '/privacy-policy',
+                to: 'about/privacy-policy',
               },
             ],
           },
