@@ -31,14 +31,10 @@ const config = {
         docs: {
           path: 'docs',
           sidebarPath: 'sidebars.js',
-          editUrl: 'https://github.com/aaronjconway/aaronconwaylo.com/blob/main',
-        },
+                },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/aaronjconway/aaronconwaylo.com/blob/main',
+
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -93,8 +89,8 @@ const config = {
             position: 'right'
           },
           {
-            href: 'https://aaronconway.floify.com/apply',
-            label: 'Start an Application',
+            to: 'https://aaronconway.floify.com/apply',
+            label: 'Apply Now',
             position: 'right',
           },
         ],
