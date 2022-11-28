@@ -1,9 +1,8 @@
 ---
 sidebar_position: 1
+title: Getting Started
 ---
 
-
-# Welcome!
 
 These articles are currently __only written by myself, a licensed and actively practicing loan officer.__
 
@@ -27,7 +26,7 @@ Forewarning: **THIS INFORMATION DOES NOT MAKE YOU A LOAN OFFICER.** Do not go ba
 a nice and correct way of bringing that up? Yes. Are there exceptions, weird situations and things I don't know? Of course. Use good Judgment. Consult an expert
 :::
 
-### How To Use This Site.  
+### How To Use This Site
  
 There are three main categories in the side bar on the left.
 If you are mobile, use the menu button top left. 
@@ -40,13 +39,13 @@ Use the search feature in the top right!
 For you desktop nerds ` Ctrl+k` will open it for you. 
 :::
 
-### Want to Contribute, Sponsor or Provide feedback?
+### Contribute, Sponsor or Feeback
 
-I would very much appreciate it. 
+You must be a licensed Loan officer or Realtor to contribute information. 
 
-You must be a licensed loan officer or Realtor to contribute. ajconway92@gmail.com
-
-[Sponsor This Page](https://patreon.com/aaronconway) for less than a burrito. 
+* Feeback - Github
+* [Contact Information](about/contact)  
+* [Sponsor This Page](https://patreon.com/aaronconway) for less than a burrito. 
 
 
 
