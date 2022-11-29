@@ -4,27 +4,24 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'For Loan Officers',
-    Svg: require('@site/static/img/logo.svg').default,
-    description: (
+    title: 'Transparent',
+      description: (
       <>
-      I hope you find this website useful.  
+    No partial truths or mis-leading information. 
       </>
     ),
   },
   {
-    title: 'For Clients',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
+    title: 'Reputable', 
+        description: (
       <>
-        Knowledge is power!
+       Over 90 happy families served. 
       </>
     ),
   },
   {
-    title: 'For Free',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
+    title: 'Free',
+      description: (
       <>
       As all information should be. 
        
@@ -37,8 +34,7 @@ function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
+          </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
