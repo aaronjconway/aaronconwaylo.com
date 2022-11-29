@@ -12,6 +12,3 @@ Obessive about doing things the right way.
 * Automotive enthusiast
 * Nerd
 
-import NameForm from './helloworld.js'
-
-<NameForm/>
