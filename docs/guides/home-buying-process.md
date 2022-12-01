@@ -3,52 +3,46 @@ title: The Home Buying Process
 description: "How to Buy a home for Dummies" 
 sidebar_position: 1
 ---
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
-src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="77yk1IHy"></script>
-
-Read: [Renting vs Buying: The Unspoken Factors](docs/guides/rent-vs-buy.md)  
-
 ## Step 1 - Financing
 
-You guessed it! Speak to a <u>state licensed</u> loan officer (LO) or broker.
+You guessed it! Speak to a <u>state licensed</u> Loan Officer (LO) or Broker.
 
-Read: [How to find a good LO.](/docs/guides/choosing-a-loan-officer)
+Although you may be able to determine some of your qualifications such as [**DTI**](/docs/dictionary/dti) yourself, 
 
-Although you may be able to determine your [DTI](/docs/dictionary/dti)  yourself and understand some of the factors
-in being qualified:
+> **You don't know what you don't know.**
 
-> You don't know what you don't know
+There are many factors that complicate the loan process besides the basic math. Choosing a great LO is fundamental 
+to not just the experience but your home buying success. 
+
+Read - [**How to Pick a Loan Officer**](/docs/guides/choosing-a-loan-officer)
+
+May I ask? 
 
 * Do you tie your shoes before you put them on? 
-* Do pour milk before cereal? - <small>Don't make me call the police</small>
-* Concealer then foundation? - <small>I had to google this</small>
-* __Do you look at homes with a realtor before knowing if you're approved?__
+* Do you pour the milk before cereal? - <small>I will call the police</small>
+* **Do you look at homes with a realtor before being approved?**
 
 **<u><center>No. You do not.</center></u>**
 
-Consult with an experienced loan officer prior to looking at homes. I ask most of my clients the same question:
+I ask most of my clients the same question, 
 
-> Do you want me to say yes now, then no later? Or would you prefer we are certain now, and are not guessing later?
+> **Do you want me to say yes now, then no later?**
 
-Everyone opts for certainty. Do not choose chaos.
+Everyone opts for certainty. Anything else is chaos. 
 
-Read: Pre-Qualified, Pre-approved? Verified? What are these? 
+If you have questions on the type of approvals. Read - [**Pre-Qualified, Pre-approved? Verified? What are these?**]
 
-### Oh, I Know I'm qualfied. I Just Want the Best Rate. 
+### Objections to Step 1
 
-\**heavy sigh*\* let's say you are correct. It would take many pages to go through all the possibilities on 
-how you could be wrong. 
+* Assumption you're qualified - Rate Shopping at the pre approval stage. 
 
-TODO: 
-Don't be this person. Read: [How and when to shop for mortgage rates: You've been fooled.](https://google.com)
-
+\**heavy sigh*\* let's say you are qualified. It would take many pages to go through all the possibilities on 
+how you could be wrong. Don't be this person. Read - [**How And When To Shop For Mortgage Rates**](docs/guides/shop-for-rates)
 There are no upsides to postponing the approval process and the consequences of being wrong are incredibly painful. 
 
-### I Don't Want My Credit Pulled
+* I Don't Want My Credit Pulled
 
-TODO:
-Read: The fear-mongering around credit inquiries. 
+Read - [The fear-mongering around credit inquiries.]
 
 Do you maintain your car? Of course. You also have to use it to get from A to B. Same goes for your credit. You
 have to use it to apply for financing. It is better to know for sure then to guess. 
@@ -190,4 +184,3 @@ If you enjoyed this content - Please follow my social media accounts in the foot
 
 I look forward to providing more educational content.
 
-<div class="fb-comments" data-href="https://aaronconwaylo.com/docs/guides/home-buying-process" data-width="400" data-numposts="5"></div>
