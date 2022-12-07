@@ -36,7 +36,7 @@ function Feature({Svg, title, description}) {
       <div className="text--center">
           </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+        <div class='text-xl font-semibold my-2'>{title}</div>
         <p>{description}</p>
       </div>
     </div>

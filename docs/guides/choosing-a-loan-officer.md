@@ -1,5 +1,5 @@
 ---
-title: How to Pick a Loan Officer
+title: How to Choose the Right Loan Officer
 description: "(Spoiler) Eeny, meeny, miny, moe is not it. "
 ---
 ## What Is Important

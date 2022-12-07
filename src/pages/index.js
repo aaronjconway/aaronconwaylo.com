@@ -13,7 +13,7 @@ function HomepageHeader() {
       <div class="self-center  flex flex-col md:w-1/2  my-12 mx-12">
         <div class="">
           <div class="text-5xl my-16 space-y-10  text-left ">
-            <span>Get <b>accurate</b> home buying <b>information</b> you <b>deserve.</b></span>
+            <span>Get the <b>accurate</b> home buying <b>information</b> you <b>deserve.</b></span>
           </div>
           <div>
                     </div>

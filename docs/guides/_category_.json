@@ -1,6 +1,7 @@
 {
   "label": "Guides",
   "position": 2,
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "Useful information about Mortgage's and the Home Buying."
