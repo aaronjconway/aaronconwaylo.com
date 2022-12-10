@@ -31,7 +31,7 @@ const config = {
         docs: {
           path: 'docs',
           sidebarPath: 'sidebars.js',
-                },
+        },
         blog: {
           showReadingTime: true,
 
@@ -53,17 +53,17 @@ const config = {
         routeBasePath: 'about',
       }),
     ],
-      async function myPlugin(context, options) {
-        return {
-          name: 'docusaurus-tailwindcss',
-          configurePostCss(postcssOptions) {
-            // appends the tailwindcss and autoprefixer
-            postcssOptions.plugins.push(require('tailwindcss'));
-            postcssOptions.plugins.push(require('autoprefixer'));
-            return postcssOptions;
-          },
-        };
-      },
+    async function myPlugin(context, options) {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          // appends the tailwindcss and autoprefixer
+          postcssOptions.plugins.push(require('tailwindcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
   ],
 
   themeConfig:
@@ -76,6 +76,11 @@ const config = {
             to: 'about/about',
             position: 'right',
             label: 'About',
+          },
+          {
+            to: 'calculator',
+            position: 'right',
+            label: 'Calculator',
           },
           {
             type: 'doc',
