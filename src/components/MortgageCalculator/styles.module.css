@@ -1,0 +1,36 @@
+:root {
+    --primary-one: #30C5FF;
+    --primary-one-light: #A0E4FF;
+    --primary-two: #FFE74C;
+    --primary-three: #69E062;
+    --secondary-one: #2A2D34;
+    --secondary-one-light: #9E9FA2;
+    --secondary-two: #1B4965;
+}
+
+:local(.container) {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+:local(label) {
+    display: block;
+    color: #777777;
+}
+
+
+:local(input) {
+    width: 100%;
+    text-indent: 1em;
+    font-size: 16px;
+    padding: .7em;
+    margin: 0 0 .2em 0;
+    border-radius: 4px;
+}
+
+:local(input:focus) {
+    border: 1px solid var(--primary-one);
+}
+
+
+
