@@ -16,6 +16,7 @@ const DefaultAdditionalPrincipalPayment = 0;
 const DefaultAssociationDues = 0;
 
 const ValidTermMonths = [60, 120, 180, 240, 360];
+const loanType = ['Conventional', 'FHA', 'VA', 'Jumbo'];
 
 export default class MortgageCalculator extends React.Component {
 
@@ -42,6 +43,7 @@ export default class MortgageCalculator extends React.Component {
       mortgageInsuranceEnabled: this.mortgageCalculator.mortgageInsuranceEnabled,
       additionalPrincipal: 0,
       associationDues: 0,
+      loanType: 'Conventional',
       mortgage: this.mortgageCalculator.calculatePayment()
     };
 
@@ -62,6 +64,18 @@ export default class MortgageCalculator extends React.Component {
 
   }
 
+  onLoanTypeChange(e) {
+    let value = e.target.value
+    if (value == 'FHA') {
+      this.setState(
+        {
+          mortgageInsuranceEnabled: false, 
+        }
+      );
+      this.onMortgageChange(mortgage);
+    }
+    return
+  }
   onPriceChange(e) {
     let value = e.target.value;
     if (value.length === 0) {
@@ -212,7 +226,7 @@ export default class MortgageCalculator extends React.Component {
 
   render() {
 
-    const { totalPrice, downPayment, additionalPrincipal, associationDues } = this.state;
+    const { totalPrice, downPayment, additionalPrincipal, associationDues, loanType } = this.state;
     const { loanAmount, principalAndInterest, tax, insurance, mortgageInsurance, total } = this.state.mortgage;
     const { interestRate, taxRate, insuranceRate, mortgageInsuranceRate, mortgageInsuranceEnabled, months } = this.mortgageCalculator;
 
@@ -232,29 +246,41 @@ export default class MortgageCalculator extends React.Component {
     const downPaymentPercent = downPayment.length === 0 ? '' : (totalPrice > 0 && downPayment > 0) ? downPayment / totalPrice : DefaultDownPaymentPercent;
 
     return (
+
       <div>
+
         <h1>Mortgage Calculator</h1>
         <div className="flex flex-col md:flex-row space-x-4 ">
-          <div>
-            <div className="flex flex-col space-y-2">
-              <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Purchase Price</label>
+          <div className="">
+            <div name='calculatorInput' className="flex flex-col w-full space-y-2">
+
+              <div className="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2">Loan Type</label>
+                <select className="border border-black rounded-md px-4 w-48" name="termMonths" onInput={this.onLoanTypeChange} defaultValue={months}>
+                  <option value="Conventional">Conventional</option>
+                  <option value="FHA">FHA</option>
+                  <option value="VA">VA</option>
+                  <option value="Jumbo">Jumbo</option>
+                </select>
+              </div>
+              <div class="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center  mx-2">Purchase Price</label>
                 <div>
                   <i class='absolute my-2 mx-2'>$</i>
                   <input
                     value={Util.moneyValue(totalPrice, false, false)} onChange={this.onPriceChange}
-                    class="w-48 border border-black rounded-md px-4"
+                    class="border border-black rounded-md px-4 w-48"
                   />
                 </div>
               </div>
-              <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Down Payment</label>
+              <div class="flex flex-col md:flex-row justify-end ">
+                <label className="whitespace-nowrap md:self-center mx-2">Down Payment</label>
                 <div className='flex flex-row space-x-2'>
                   <div>
                     <i class='absolute my-2 mx-2'>$</i>
                     <input
                       value={Util.moneyValue(downPayment, false, false)} onChange={this.onDownPaymentChange}
-                      class="w-32 border border-black rounded-md px-4"
+                      class=" border border-black rounded-md px-4 w-32"
                     />
                   </div>
                   <p className="my-2">Or</p>
@@ -269,21 +295,21 @@ export default class MortgageCalculator extends React.Component {
                 </div>
 
               </div>
-              <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Interest Rate</label>
+              <div class="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2">Interest Rate</label>
                 <div >
                   <i class='absolute my-2 mx-2'>%</i>
                   <input
                     defaultValue={Util.percentValue(interestRate, false)} step="0.01" onInput={this.onInterestRateChange}
-                    class="w-48 border border-black rounded-md px-4 "
+                    class="border border-black rounded-md px-4 w-48"
                     type="number"
                     name="interestRate"
                   />
                 </div>
               </div>
 
-              <div className="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Term</label>
+              <div className="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2">Term</label>
                 <select className="border border-black rounded-md px-4 w-48" name="termMonths" onInput={this.onTermMonthsChange} defaultValue={months}>
                   <option value="360">30 years</option>
                   <option value="240">20 years</option>
@@ -292,61 +318,62 @@ export default class MortgageCalculator extends React.Component {
                   <option value="60">5 years</option>
                 </select>
               </div>
-              <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Additional Payment (Monthly)</label>
+              <div class="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2">Additional Payment (Monthly)</label>
                 <div>
                   <i class='absolute my-2 mx-2'>$</i>
                   <input
                     value={Util.moneyValue(additionalPrincipal, false, false)} onInput={this.onAdditionalPrincipalChange}
-                    class="w-48 border border-black rounded-md px-4"
+                    class=" border border-black rounded-md px-4 w-48"
                     type="text"
                     name="additionalPrincipalPayment"
                   />
                 </div>
               </div>
-              <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Property Tax Rate (Annual)</label>
+              <div class="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2">Property Tax Rate (Annual)</label>
                 <div>
                   <i class='absolute my-2 mx-2'>%</i>
                   <input
                     defaultValue={Util.percentValue(taxRate, false)} step="0.01" onInput={this.onTaxRateChange}
-                    class="w-48 border border-black rounded-md px-4"
+                    class=" border border-black rounded-md px-4 w-48"
                     type="number"
                     name="taxRate"
                   />
                 </div>
               </div>
-              <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Hazard Insurance (Annual)</label>
+              <div class="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2 ">Hazard Insurance (Annual)</label>
                 <div>
                   <i class='absolute my-2 mx-2'>$</i>
                   <input
                     defaultValue={Util.percentValue(insuranceRate, false) * totalPrice / 100} onInput={this.onInsuranceRateChange}
-                    class="w-48 border border-black rounded-md px-4"
+                    class=" border border-black rounded-md px-4 w-48"
                     type="number"
                     name="insuranceRate"
                   />
                 </div>
               </div>
-              <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Association Dues (Monthly)</label>
+              <div class="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2">Association Dues (Monthly)</label>
                 <div>
                   <i class='absolute my-2 mx-2'>$</i>
                   <input
                     defaultValue={Util.moneyValue(associationDues, false, false)} onInput={this.onAssociationDuesChange}
-                    class="w-48 border border-black rounded-md px-4"
+                    class=" border border-black rounded-md px-4 w-48"
                     type="number"
                     name="associationDues"
                   />
                 </div>
-              </div>             <div class="flex flex-row justify-end">
-                <label className="whitespace-nowrap self-center mx-2">Mortgage Insurance</label>
+              </div>
+              <div class="flex flex-col md:flex-row justify-end">
+                <label className="whitespace-nowrap md:self-center mx-2">Mortgage Insurance</label>
                 <div className='flex flex-row space-x-2'>
                   <div>
                     <i class='absolute my-2 mx-2'>%</i>
                     <input
                       defaultValue={Util.percentValue(mortgageInsuranceRate, false)} onInput={this.onMortgageInsuranceRateChange}
-                      class="w-32 border border-black rounded-md px-4"
+                      class=" border border-black rounded-md px-4 w-48"
                       name="mortgageInsuranceRate"
                       type="number"
                     />
@@ -355,18 +382,7 @@ export default class MortgageCalculator extends React.Component {
               </div>
             </div>
           </div>
-          <div className="self-center flex flex-col md:flex-row space-x-4">
-            <div id='test' className='w-[283px] inline-block text-sm px-4 py-4'>
-              <h2>Notes</h2>
-              {downPaymentPercent >= .20 ?
-                <div className="inline-block">* Mortgage insurance has been disabled due to the down payment
-                  being over 20% on a loan type of coventional</div> : <div className="inline-block">* Mortgage insurance is enabled due to conventional loan and less than 20% down.
-                  <a href='https://aaronconwaylo.com/docs/dictionary'> Click for more on mortgage insurance info</a>
-                </div>}
-              {additionalPrincipal > 0 ?
-                <div className="inline-block">* You will pay off the mortgage
-                  <strong> {Math.round((months - (years * 12 + remainingMonths)) / 12) + ' years and ' + Math.round((months - (years * 12 + remainingMonths)) % 12)} months EARLY</strong> by paying this excess.</div> : '* No additional monthly principal payment.'}
-            </div>
+          <div className="flex flex-col md:flex-row space-x-4 border boder-solid">
             <div class="flex flex-col">
               <div class="overflow-x-auto">
                 <div class="py-2 inline-block ">
@@ -425,6 +441,21 @@ export default class MortgageCalculator extends React.Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div id='test' className='inline-block text-sm px-4 py-4'>
+            <h2>Notes</h2>
+            {downPaymentPercent >= .20 ?
+              <div className="inline-block">* Mortgage insurance has been disabled due to the down payment
+                being over 20% on a loan type of coventional<p></p></div> : <div className="inline-block">* Mortgage insurance is enabled due to conventional loan and less than 20% down.
+                <a href='https://aaronconwaylo.com/docs/dictionary'> Click for more on mortgage insurance info</a>
+                <p></p>
+              </div>
+            }
+            {additionalPrincipal > 0 ?
+              <div className="inline-block">* You will pay off the mortgage
+                <strong> {Math.round((months - (years * 12 + remainingMonths)) / 12) +
+                  ' years and ' + Math.round((months - (years * 12 + remainingMonths)) % 12)}
+                  months EARLY</strong> by paying this excess.</div> : <div>* No additional monthly principal payment. <p></p></div>}
           </div>
         </div>
       </div>

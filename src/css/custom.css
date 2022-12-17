@@ -23,7 +23,7 @@
 
 }
 
-a.navbar__item:nth-child(4){
+a.navbar__item:nth-child(5){
   background-color: #3997F5; 
   color: #FFFFFF; 
   border-color: #1e293b;
@@ -87,7 +87,13 @@ a.navbar__item:nth-child(4){
 
 
 
-[data-theme="dark"] a.navbar__item:nth-child(4){
+[data-theme="dark"] a.navbar__item:nth-child(5){
 
 border-color: #FFFFFF;
+}
+
+
+.address {
+  white-space:pre;
+  text-align: right;
 }

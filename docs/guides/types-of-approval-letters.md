@@ -16,7 +16,7 @@ description: "Details on the differeneces between qualificaiton, approval, and v
 Key factors:
 
 * How you are percieved to the seller. Are they concerned about the loan closing? 
-* Have you had a thoughrough enough review to catch any potential issues? 
+* Have you had a thorough enough review to catch any potential issues? 
 * Is the Loan Officer confident in my qualifications? 
 * Is the Realtor confident in the approval? 
 
@@ -26,6 +26,7 @@ The importantance of these factors will be broken down throughout this article.
 In general, if there is an option to get an "upgraded", "verified", or any form of higher level approval, you should opt
 for this. It should be free. 
 :::
+
 ## Approval Types 
 
 These are ranked from weakest to strongest. 
@@ -41,13 +42,13 @@ These are ranked from weakest to strongest.
 **A verbally based qualification letter without a copy of the credit report should be illegal.**
 
 If a Lender issues this, they do not care about your best interests. Most lenders will not write an approval 
-without documents for good reason. If you are concered about credit, please read TODO credit
+without documents for good reason. If you are concered about credit, please read [Credit](credit) 
 
-A verabal assesment of your income, assets, with a copy of the credit report is commobly referred to as a 
-Pre-Qualification (PQL) 
+A verbal assesment of your income, assets, with a copy of the credit report is commonly referred to as a 
+Pre-Qualification (PQL).
 
 The quality of this letter is <u>highly dependent</u> on the quality of Loan Officer and frowned upon
-by most realtors and sellers. There are just too many things that can go wrong when relying on the conversation
+by most Realtors and sellers. There are just too many things that can go wrong when relying on the conversation
 between a loan officer and client. 
 
 **This type of letter might as well be written in crayon by a 5 year old**
@@ -89,7 +90,7 @@ This is the best option if available.
 
 After providing all the documents your Loan Officer has and underwriter that can sign off on the quality of your approval.
 
-It doesn't guaruntee but it does greatly increase the certainty of the loan closing. 
+It doesn't guaruntee but it does greatly increase the certainty of the Loan closing. 
 
 :::caution
 Some places will use the word guaruntee. Please take this with a grain of salt. Out of personal experience working
@@ -109,7 +110,7 @@ process.
 
 ## Pyschology
 
-Going back to the factors in the begining of this article, your realtor has to negotiate on your behalf, your loan officer 
+Going back to the factors in the begining of this article, your Realtor has to negotiate on your behalf, your loan officer 
 may have to convince the listing agent that this is the best offer, and the seller ultimatley wants to know they are 
 going to get their money. 
 

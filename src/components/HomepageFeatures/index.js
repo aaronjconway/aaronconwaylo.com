@@ -24,7 +24,6 @@ const FeatureList = [
       description: (
       <>
       As all information should be. 
-       
       </>
     ),
   },

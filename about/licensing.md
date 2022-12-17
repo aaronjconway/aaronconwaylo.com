@@ -2,15 +2,19 @@
 title: Licensing
 ---
 
-These are the states I am currently licensed in. I do have Brokers that can help in any state and I will ensure the transaciton goes smoothly incase you don't 
-live in one of my states. 
+I do have Brokers that can help in any state and I will ensure the transaciton goes smoothly incase you don't 
+live in one of the states I'm licensed in. 
 
-
+:::info
 If you are a realtor wanting to use me and you aren't in one of my states. 
-
-
-
  
-I have no problem adding more states.
+I have no problem adding more states. 
+:::
 
+> Some states do not provide a license number.  
 
+ - Arizona 1019790
+ - California CA-DFPI2087178
+ - Louisiana 
+ - Texas SML
+ - Washington MLO-2087178

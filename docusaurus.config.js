@@ -124,6 +124,15 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Address',
+            items: [
+              {
+                label: '3100 W Ray Road #201 Office #209 Chandler, AZ 85226',
+                to: 'httpsorg/EntityDetails.aspx/COMPANY/1660690',
+              },
+            ],
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Aaron Conway Loan Officer, LLC`,
       },
