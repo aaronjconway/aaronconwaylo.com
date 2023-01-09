@@ -2,7 +2,6 @@
 title: Privacy Policy
 ---
 
-
 Customer service is very important to us. As we continue to improve and expand our services, we recognize our customers’ need and desire to preserve their privacy and confidentiality. Safeguarding our customers’ privacy is also very important to us. We have adopted standards that help maintain and preserve the confidentiality of customers’ nonpublic personal information. The following Statement affirms our continued efforts to safeguard customer information.
 
 ## Information We Collect:

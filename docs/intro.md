@@ -9,9 +9,9 @@ However, these articles are __only written by myself, a licensed and actively pr
 matter experts. Yikes!</small>) I will do my absolute best to provide accurate information. 
 :::
 
-If you are mobile, use the menu button top left. 
+If you are on a mobile phone, use the menu button top left. 
 
-Please take a look around! 
+Take a look around! 
 
 :::info
  Search bar in development.
@@ -19,32 +19,26 @@ Please take a look around!
 
 ## Why This Site Was Created
 
-I developed this resource to educate and provide realistic expectations in an effort to gain business
-through transparency, integrity, and honesty.
+I developed this resource to educate and provide realistic expectations in an effort to gain business through transparency, integrity, and honesty.
 
-Unfortunately, there is a vast amount of information online whose quality and accuracy vary dramatically. With
-such a large financial decision, this shouldn't be the case. Many clients feel they need to bear the burden of 
-choosing the right loan and research themselves becuase of the reputation of Loan Officers.
+Unfortunately, there is a vast amount of information online whose quality and accuracy vary dramatically.  Many clients have little trust with Loan Officers due to their poor historical reputation. 
 
-The problem is that the articles online are barely the tip of the information iceberg needed to accurately assess your mortgage
-qualifications. This leads to,
+One of the problems is that the articles online are barely the tip of the information iceberg needed to accurately assess your mortgage qualifications. This leads to,
 
 >“The greatest enemy of knowledge is not ignorance, **it is the illusion of knowledge.**”
 ― Daniel J. Boorstin 
 
-Although there are many established sites that seem to provide _good_ information, they tend to be lacking in one crucial area - reality.
+Although there are many established sites that seem to provide _good_ information, they tend to leave out crucial pieces that dramatically change the pricing or even if the loan is allowed. 
 
-Some examples of major websites being only partially true: 
+Some common examples seen online being only partially true: 
 
-* conventional loans do go as low as 620 - this is almost never a good choice when credit is below 680
-* DPA - there is a real cost to this in terms of the monthly payment which isn't openly talked about.
-* The availability and stipulations tied to First Time Home Buyer programs.  
+* Conventional loans do go as low as test - this is almost never a good choice when credit is below 680. The [cost](/dictionary/cost.md) is incredibly high. 
+* DPA - Although this is sometimes a good option the monthly payment is considerably higher which isn't openly talked about.
+* The availability and stipulations tied to First Time Home Buyer programs. 
 
-This website strives to provide the most accurate, no bologna, good expectation advice so clients can have more 
-confidence and reduce the chance of hearbreak later on. 
+This website strives to provide accurate and honest information to ensure that  good expectations are set. This will increase confidence and reduce the chance of heartbreak later on. 
 
-## Contribute, Sponsor, or Feeback
-
+## Contribute, Sponsor, or Feedback
 
 * [Contact Information](/about/contact) Note: You must be a licensed Loan Officer or Realtor to contribute but all feedback is welcome.
 * [Sponsor This Page](https://patreon.com/aaronconway) for less than a burrito. 

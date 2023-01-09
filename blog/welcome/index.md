@@ -25,14 +25,14 @@ I used to think it was a shoe in. I'm a nerd. How hard could it be?
 * Just manage your clients (getting clients will be easy duh)  
 * Just learn all the small things on the fly.
 
-Ez game right? [GG](https://www.urbandictionary.com/define.php?term=GG) as my friend [Nathan](https://www.instagram.com/supranate/) would say.
+Easy game right? [GG](https://www.urbandictionary.com/define.php?term=GG) as my friend [Nathan](https://www.instagram.com/supranate/) would say.
 
 ### (Spoiler) I was wrong
 
 Running your own business is incredibly difficult. Surprise!!! Both the Quantity and in-depthy-ness of knowledge
 needed to be competitive, I vastly underestimated. 
 
-I have been slaped firmly in the face with my favorite saying. 
+I have been slapped firmly in the face with my favorite saying. 
 > You don't know what you don't know
 
 Now that we've rooted ourselves in despair, where do we go from here?
@@ -53,7 +53,7 @@ I'm looking forward to blazing this trail of a new style of loan officer.
 
 * Bringing tools from the engineering world into lending to improve the home buying experience.
 * Transparency. Honesty. The full truth and nothing but.
-* Arming the homebuyer with accurate knowledge to bridge the gap between reality and what's advertised. 
+* Arming the home buyer with accurate knowledge to bridge the gap between reality and what's advertised. 
 
 This should be the standard, not the exception. 
 

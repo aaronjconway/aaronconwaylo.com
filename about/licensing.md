@@ -2,8 +2,7 @@
 title: Licensing
 ---
 
-I do have Brokers that can help in any state and I will ensure the transaciton goes smoothly incase you don't 
-live in one of the states I'm licensed in. 
+I do have brokers that can help in any state if you need assistance. 
 
 :::info
 If you are a realtor wanting to use me and you aren't in one of my states. 
@@ -11,7 +10,8 @@ If you are a realtor wanting to use me and you aren't in one of my states.
 I have no problem adding more states. 
 :::
 
-> Some states do not provide a license number.  
+
+Some states do not provide a license number.  
 
  - Arizona 1019790
  - California CA-DFPI2087178

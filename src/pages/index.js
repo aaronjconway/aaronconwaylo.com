@@ -37,9 +37,6 @@ function HomepageHeader() {
             </div>
           </div>
         </div>
-        <div>
-          <img src='img/main.jpg' style={{width:500}}/>
-        </div>
       </div>
     </header>
   );
@@ -56,7 +53,7 @@ export default function Home() {
         <HomepageFeatures />
         <div className='bg-zinc-100 dark:bg-zinc-800 py-12'>
           <div className='text-4xl mx-12 font-semibold'>Reviews</div>
-          <div className='container w-auto md:w-2/3'>
+          <div className='md:w-1/3 container justify-center'>
             <Reviews />
           </div>
         </div>

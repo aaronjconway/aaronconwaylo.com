@@ -1,11 +1,12 @@
 import Util from "./Util"
 
 import React from 'react';
-import mortgageJs from 'mortgage-js';
-import PaymentSchedule from "./PaymentSchedule";
+import calculator from './calculator';
+import DefaultStyles from './styles.module.css';
+
 
 const DefaultPrice = 500000;
-const DefaultDownPayment = 50000;
+const DefaultDownPayment = 125000;
 const DefaultInterestRate = 0.0625;
 const DefaultTermMonths = 360;
 const DefaultTaxRate = 0.0125;
@@ -13,14 +14,13 @@ const DefaultInsuranceRate = .003;
 const DefaultMortgageInsuranceRate = 0.003;
 const DefaultDownPaymentPercent = 0.2;
 const DefaultAdditionalPrincipalPayment = 0;
-const DefaultAssociationDues = 0;
 
 const ValidTermMonths = [60, 120, 180, 240, 360];
-const loanType = ['Conventional', 'FHA', 'VA', 'Jumbo'];
+const loanType = ['conventional', 'fha', 'va', 'jumbo'];
 
 export default class MortgageCalculator extends React.Component {
 
-  mortgageCalculator = mortgageJs.createMortgageCalculator();
+  mortgageCalculator = calculator.createMortgageCalculator();
 
   constructor(props) {
     super(props);
@@ -34,6 +34,7 @@ export default class MortgageCalculator extends React.Component {
     this.mortgageCalculator.mortgageInsuranceRate = Util.numberValueOrDefault(props.mortgageInsuranceRate, 0, DefaultMortgageInsuranceRate);
     this.mortgageCalculator.mortgageInsuranceEnabled = props.mortgageInsuranceEnabled !== false;
     this.mortgageCalculator.additionalPrincipal = Util.numberValueOrDefault(props.additionalPrincipalPayment, 0, DefaultAdditionalPrincipalPayment);
+    this.mortgageCalculator.loanType = 'conventional';
 
 
     this.state = {
@@ -43,7 +44,7 @@ export default class MortgageCalculator extends React.Component {
       mortgageInsuranceEnabled: this.mortgageCalculator.mortgageInsuranceEnabled,
       additionalPrincipal: 0,
       associationDues: 0,
-      loanType: 'Conventional',
+      loanType: this.mortgageCalculator.loanType,
       mortgage: this.mortgageCalculator.calculatePayment()
     };
 
@@ -58,6 +59,7 @@ export default class MortgageCalculator extends React.Component {
     this.onInsuranceRateChange = this.onInsuranceRateChange.bind(this);
     this.onMortgageInsuranceRateChange = this.onMortgageInsuranceRateChange.bind(this);
     this.onMortgageInsuranceEnabledChange = this.onMortgageInsuranceEnabledChange.bind(this);
+    this.onLoanTypeChange = this.onLoanTypeChange.bind(this);
   }
 
   onMortgageChange(mortgage) {
@@ -66,16 +68,17 @@ export default class MortgageCalculator extends React.Component {
 
   onLoanTypeChange(e) {
     let value = e.target.value
-    if (value == 'FHA') {
-      this.setState(
-        {
-          mortgageInsuranceEnabled: false, 
-        }
-      );
-      this.onMortgageChange(mortgage);
-    }
-    return
+    this.setState({
+      loanType: value,
+    });
+    this.mortgageCalculator.loanType = value;
+    let mortgage = this.mortgageCalculator.calculatePayment();
+    this.setState({
+      mortgage: mortgage,
+    });
+    this.onMortgageChange(mortgage);
   }
+
   onPriceChange(e) {
     let value = e.target.value;
     if (value.length === 0) {
@@ -226,11 +229,18 @@ export default class MortgageCalculator extends React.Component {
 
   render() {
 
-    const { totalPrice, downPayment, additionalPrincipal, associationDues, loanType } = this.state;
+    const { totalPrice, downPayment, additionalPrincipal, associationDues } = this.state;
     const { loanAmount, principalAndInterest, tax, insurance, mortgageInsurance, total } = this.state.mortgage;
-    const { interestRate, taxRate, insuranceRate, mortgageInsuranceRate, mortgageInsuranceEnabled, months } = this.mortgageCalculator;
+    const { interestRate, taxRate, insuranceRate, mortgageInsuranceRate, mortgageInsuranceEnabled, months, loanType } = this.mortgageCalculator;
 
     let paymentCount = this.state.mortgage.paymentSchedule.length;
+
+    const notes = []
+    
+    for (var note in this.mortgageCalculator.loanNotes) {
+      notes.push(this.mortgageCalculator.loanNotes[note])
+    }
+
 
     let years = Math.floor(paymentCount / 12);
     let remainingMonths = paymentCount % 12;
@@ -257,10 +267,10 @@ export default class MortgageCalculator extends React.Component {
               <div className="flex flex-col md:flex-row justify-end">
                 <label className="whitespace-nowrap md:self-center mx-2">Loan Type</label>
                 <select className="border border-black rounded-md px-4 w-48" name="termMonths" onInput={this.onLoanTypeChange} defaultValue={months}>
-                  <option value="Conventional">Conventional</option>
-                  <option value="FHA">FHA</option>
-                  <option value="VA">VA</option>
-                  <option value="Jumbo">Jumbo</option>
+                  <option value="conventional">Conventional</option>
+                  <option value="fha">FHA</option>
+                  <option value="va">VA</option>
+                  <option value="jumbo">Jumbo</option>
                 </select>
               </div>
               <div class="flex flex-col md:flex-row justify-end">
@@ -372,7 +382,7 @@ export default class MortgageCalculator extends React.Component {
                   <div>
                     <i class='absolute my-2 mx-2'>%</i>
                     <input
-                      defaultValue={Util.percentValue(mortgageInsuranceRate, false)} onInput={this.onMortgageInsuranceRateChange}
+                      value ={Util.percentValue(mortgageInsuranceRate, false)} onChange={this.onMortgageInsuranceRateChange}
                       class=" border border-black rounded-md px-4 w-48"
                       name="mortgageInsuranceRate"
                       type="number"
@@ -398,25 +408,26 @@ export default class MortgageCalculator extends React.Component {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr class="border-b">
-                          <td class="whitespace-nowrap text-sm text-gray-900"> Principal and Interest</td>
-                          <td class="text-md text-gray-900 whitespace-nowrap">
+                        <tr>
+                          <td> Principal and Interest</td>
+                          <td>
                             {Util.moneyValue(principalAndInterest)}
                           </td>
                         </tr>
-                        <tr class="bg-white border-b">
-                          <td class="whitespace-nowrap text-sm text-gray-900">Property Taxes</td>
-                          <td class="text-md text-gray-900 whitespace-nowrap">
-                            {Util.moneyValue(taxRate * totalPrice / 12)}
+                        <tr>
+                          <td>Property Taxes</td>
+                          <td>
+                            {Util.moneyValue(this.state.mortgage.tax)}
                           </td>
                         </tr>
-                        <tr class="bg-white border-b">
-                          <td class="whitespace-nowrap text-sm text-gray-900">Home Owners Insurance</td>
-                          <td class="text-md text-gray-900 whitespace-nowrap">
-                            {Util.moneyValue(insuranceRate * totalPrice / 12)}
+                        <tr>
+                          <td>Home Owners Insurance</td>
+                          <td>
+                            {Util.moneyValue(this.state.mortgage.insurance)}
                           </td>
                         </tr>
-                        {downPaymentPercent < .20 ?
+                        {/* you'll only have MI in these two situaitons. so onlyshow then  */} 
+                        {(loanType == 'conventional' & downPaymentPercent < .20) || (loanType == 'fha') ?
                           <tr class="bg-white border-b">
                             <td class="whitespace-nowrap text-sm text-gray-900">Mortgage Insurance</td>
                             <td class="text-md text-gray-900 whitespace-nowrap">
@@ -442,20 +453,17 @@ export default class MortgageCalculator extends React.Component {
               </div>
             </div>
           </div>
-          <div id='test' className='inline-block text-sm px-4 py-4'>
+          <div id='test' className='border-2 border-solid h-fit rounded-md md:w-1/3 inline-block text-sm px-4 py-4'>
             <h2>Notes</h2>
-            {downPaymentPercent >= .20 ?
-              <div className="inline-block">* Mortgage insurance has been disabled due to the down payment
-                being over 20% on a loan type of coventional<p></p></div> : <div className="inline-block">* Mortgage insurance is enabled due to conventional loan and less than 20% down.
-                <a href='https://aaronconwaylo.com/docs/dictionary'> Click for more on mortgage insurance info</a>
-                <p></p>
-              </div>
+            {notes.map(item => {
+
+              if (item != '') {
+                return <p><b className='text-md'>*</b> {item}</p> 
+              };
+
             }
-            {additionalPrincipal > 0 ?
-              <div className="inline-block">* You will pay off the mortgage
-                <strong> {Math.round((months - (years * 12 + remainingMonths)) / 12) +
-                  ' years and ' + Math.round((months - (years * 12 + remainingMonths)) % 12)}
-                  months EARLY</strong> by paying this excess.</div> : <div>* No additional monthly principal payment. <p></p></div>}
+            )
+            }
           </div>
         </div>
       </div>
