@@ -15,12 +15,14 @@ function HomepageHeader() {
           <div class=" my-4 text-4xl">
             <span>The <b className='whitespace-nowrap'><u>no nonsense</u></b> home buying tools, education, and experience you <b>deserve.</b></span>
           </div>
-          <div>
+{/* add image below if doing so*/}
+          <div className='w-96'>
+          <img src={require('@site/static/img/main.jpg').default} />
           </div>
           <div class="flex flex-col md:flex-row md:space-x-4 justify-start">
             <div className=' my-4'>
               <Link
-                class="bg-white border-solid 
+                class="bg-white border-solid
               rounded-md border border-stone-800 inline-block text-xl rounded-sm px-4 py-2 text-black hover:text-blue-500 dark:hover:text-blue-500 dark:border-zinc-100 dark:text-white dark:bg-zinc-700"
                 to="/docs/intro"
               >
